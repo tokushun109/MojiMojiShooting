@@ -8,9 +8,9 @@ namespace Target.Generator
 		void Start()
 		{
 			Application.targetFrameRate = 60;
-			// TODO ここで文字に応じた初期値を入れる
-			// TODO 現状はworld座標だが、スクリーンでずれないようにしたい
-			Instantiate(targetObj, new Vector3(-1.35f, 1, 0), Quaternion.identity);
+			GameObject target = Instantiate(targetObj);
+			target.transform.SetParent(canvasObj.transform, false);
+			target.GetComponent<RectTransform>().anchoredPosition = new Vector2(-220, 170);
 		}
 	}
 }
