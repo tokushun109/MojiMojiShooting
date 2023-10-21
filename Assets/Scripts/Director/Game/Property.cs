@@ -14,6 +14,9 @@ namespace Game.Director
 		// 現在の文字
 		public Character currentCharacter;
 
+		// 現在のターゲット位置のインデックス番号
+		public int currentPositionIndex { get; private set; } = 0;
+
 		public class Character
 		{
 			// 表示する文字

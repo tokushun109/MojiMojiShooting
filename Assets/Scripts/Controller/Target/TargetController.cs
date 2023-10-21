@@ -25,16 +25,16 @@ namespace Target.Controller
 				{
 
 					Vector2[] positions = GameDirector.instance.currentCharacter.positions;
-					currentPositionIndex++;
-					if (currentPositionIndex <= positions.Length - 1)
+					GameDirector.instance.NextPosition();
+					if (GameDirector.instance.currentPositionIndex <= positions.Length - 1)
 					{
 						// ターゲットを移動する
-						transform.position = GameDirector.instance.currentCharacter.positions[currentPositionIndex];
+						transform.position = GameDirector.instance.GetPosition();
 					}
 					else
 					{
 						// ポジションをリセットする
-						currentPositionIndex = 0;
+						GameDirector.instance.ResetPosition();
 						// オブジェクトを消す
 						Destroy(gameObject);
 					}
