@@ -1,3 +1,4 @@
+using Game.Director;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -19,11 +20,24 @@ namespace Target.Controller
 				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 				RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
+				// クリック先にオブジェクトがある かつオブジェクトがターゲットだった時
 				if (hit2d && hit2d.collider.gameObject == gameObject)
 				{
-					Debug.Log(hit2d.transform.gameObject.name);
-					// TODO ターゲットを次の場所に移動する
-					Destroy(hit2d.transform.gameObject);
+
+					Vector2[] positions = GameDirector.instance.currentCharacter.positions;
+					currentPositionIndex++;
+					if (currentPositionIndex <= positions.Length - 1)
+					{
+						// ターゲットを移動する
+						transform.position = GameDirector.instance.currentCharacter.positions[currentPositionIndex];
+					}
+					else
+					{
+						// ポジションをリセットする
+						currentPositionIndex = 0;
+						// オブジェクトを消す
+						Destroy(gameObject);
+					}
 				}
 			}
 		}
