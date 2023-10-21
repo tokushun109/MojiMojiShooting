@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9438f94970e4b1ca1fa109d4ecec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetObj: {fileID: 4184051192703719485, guid: 68b62c6ca9aef47f58444c872c1e8aa9, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +504,7 @@ RectTransform:
   m_GameObject: {fileID: 1269901721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 72008305}
@@ -526,7 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -629,7 +630,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1037438600}
-  - {fileID: 1123380534}
-  - {fileID: 177219655}
   - {fileID: 1919338251}
   - {fileID: 72008305}
+  - {fileID: 1123380534}
+  - {fileID: 177219655}
