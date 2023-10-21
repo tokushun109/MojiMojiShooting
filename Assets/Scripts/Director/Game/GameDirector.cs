@@ -7,15 +7,17 @@ namespace Game.Director
 
 		void Awake()
 		{
+			// シングルトンパターン用
 			if (!instance) instance = this;
+
+			// TODO キャラクターをランダムで選択するメソッドを呼び出すようにする
+			currentCharacter = new Character(CharacterTypeEnum.Hiragana, (int)HiraganaIndexEnum.あ);
+			characterText.text = currentCharacter.displayCharacter;
 		}
 
 		// Start is called before the first frame update
 		void Start()
 		{
-			// TODO キャラクターをランダムで選択するメソッドを呼び出すようにする
-			currentCharacter = new Character(CharacterTypeEnum.Hiragana, (int)HiraganaIndexEnum.あ);
-			characterText.text = currentCharacter.displayCharacter;
 		}
 
 		// Update is called once per frame

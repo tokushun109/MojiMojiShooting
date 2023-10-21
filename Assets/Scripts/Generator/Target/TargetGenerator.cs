@@ -1,3 +1,4 @@
+using Game.Director;
 using UnityEngine;
 
 namespace Target.Generator
@@ -10,7 +11,7 @@ namespace Target.Generator
 			Application.targetFrameRate = 60;
 			GameObject target = Instantiate(targetObj);
 			target.transform.SetParent(canvasObj.transform, false);
-			target.GetComponent<RectTransform>().anchoredPosition = new Vector2(-220, 170);
+			target.GetComponent<RectTransform>().anchoredPosition = GameDirector.instance.GetPosition();
 		}
 	}
 }

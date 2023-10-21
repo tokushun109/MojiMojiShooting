@@ -39,10 +39,10 @@ namespace Game.Director
 						{
 							case HiraganaIndexEnum.あ:
 								positions = new Vector2[] {
-									new Vector2(-1.35f, 1),
-									new Vector2(1, 1.3f),
-									new Vector2(-0.37f, 1.7f),
-									new Vector2(-0.12f, -1.14f),
+									new Vector2(-225, 138),
+									new Vector2(178, 160),
+									new Vector2(-52, 232),
+									new Vector2(-41, 279),
 									new Vector2(0.57f, 0.39f),
 									new Vector2(-1.38f, -0.87f),
 									new Vector2(-0.37f, 0.37f),

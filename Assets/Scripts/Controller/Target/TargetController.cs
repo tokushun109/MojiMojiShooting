@@ -6,6 +6,8 @@ namespace Target.Controller
 {
 	public partial class TargetController : MonoBehaviour
 	{
+
+
 		// Start is called before the first frame update
 		// void Start()
 		// {
@@ -23,7 +25,6 @@ namespace Target.Controller
 				// クリック先にオブジェクトがある かつオブジェクトがターゲットだった時
 				if (hit2d && hit2d.collider.gameObject == gameObject)
 				{
-
 					Vector2[] positions = GameDirector.instance.currentCharacter.positions;
 					GameDirector.instance.NextPosition();
 					if (GameDirector.instance.currentPositionIndex <= positions.Length - 1)
