@@ -30,7 +30,7 @@ namespace Target.Controller
 					if (GameDirector.instance.currentPositionIndex <= positions.Length - 1)
 					{
 						// ターゲットを移動する
-						transform.position = GameDirector.instance.GetPosition();
+						transform.GetComponent<RectTransform>().anchoredPosition = GameDirector.instance.GetPosition();
 					}
 					else
 					{

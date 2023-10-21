@@ -42,12 +42,12 @@ namespace Game.Director
 									new Vector2(-225, 138),
 									new Vector2(178, 160),
 									new Vector2(-52, 232),
-									new Vector2(-41, 279),
-									new Vector2(0.57f, 0.39f),
-									new Vector2(-1.38f, -0.87f),
-									new Vector2(-0.37f, 0.37f),
-									new Vector2(1.34f, -0.39f),
-									new Vector2(0.52f, -1.46f),
+									new Vector2(-41, -279),
+									new Vector2(118, 65),
+									new Vector2(-240, -238),
+									new Vector2(9, 22),
+									new Vector2(253, -133),
+									new Vector2(65, -304),
 								};
 								break;
 								// TODO これ以降で別の文字も設定していく
