@@ -6,6 +6,8 @@ namespace Target.Controller
 {
 	public partial class TargetController : MonoBehaviour
 	{
+
+
 		// Start is called before the first frame update
 		// void Start()
 		// {
@@ -23,18 +25,17 @@ namespace Target.Controller
 				// クリック先にオブジェクトがある かつオブジェクトがターゲットだった時
 				if (hit2d && hit2d.collider.gameObject == gameObject)
 				{
-
 					Vector2[] positions = GameDirector.instance.currentCharacter.positions;
-					currentPositionIndex++;
-					if (currentPositionIndex <= positions.Length - 1)
+					GameDirector.instance.NextPosition();
+					if (GameDirector.instance.currentPositionIndex <= positions.Length - 1)
 					{
 						// ターゲットを移動する
-						transform.position = GameDirector.instance.currentCharacter.positions[currentPositionIndex];
+						transform.GetComponent<RectTransform>().anchoredPosition = GameDirector.instance.GetPosition();
 					}
 					else
 					{
 						// ポジションをリセットする
-						currentPositionIndex = 0;
+						GameDirector.instance.ResetPosition();
 						// オブジェクトを消す
 						Destroy(gameObject);
 					}

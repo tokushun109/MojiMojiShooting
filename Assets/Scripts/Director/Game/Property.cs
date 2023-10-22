@@ -14,6 +14,9 @@ namespace Game.Director
 		// 現在の文字
 		public Character currentCharacter;
 
+		// 現在のターゲット位置のインデックス番号
+		public int currentPositionIndex { get; private set; } = 0;
+
 		public class Character
 		{
 			// 表示する文字
@@ -36,15 +39,15 @@ namespace Game.Director
 						{
 							case HiraganaIndexEnum.あ:
 								positions = new Vector2[] {
-									new Vector2(-1.35f, 1),
-									new Vector2(1, 1.3f),
-									new Vector2(-0.37f, 1.7f),
-									new Vector2(-0.12f, -1.14f),
-									new Vector2(0.57f, 0.39f),
-									new Vector2(-1.38f, -0.87f),
-									new Vector2(-0.37f, 0.37f),
-									new Vector2(1.34f, -0.39f),
-									new Vector2(0.52f, -1.46f),
+									new Vector2(-225, 138),
+									new Vector2(178, 160),
+									new Vector2(-52, 232),
+									new Vector2(-41, -279),
+									new Vector2(118, 65),
+									new Vector2(-240, -238),
+									new Vector2(9, 22),
+									new Vector2(253, -133),
+									new Vector2(65, -304),
 								};
 								break;
 								// TODO これ以降で別の文字も設定していく
