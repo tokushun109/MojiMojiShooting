@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,9 +14,10 @@ namespace Game.Director
 
 		// 現在の文字
 		public Character currentCharacter;
-
 		// 現在のターゲット位置のインデックス番号
 		public int currentPositionIndex { get; private set; } = 0;
+		// これまで選択されたcharacterの情報をリストで保存
+		public List<(CharacterTypeEnum, int)> characterHistories;
 
 		public class Character
 		{
@@ -29,7 +31,7 @@ namespace Game.Director
 				switch (characterType)
 				{
 					case CharacterTypeEnum.Hiragana:
-						int maxIndex = Enum.GetValues(typeof(HiraganaIndexEnum)).Length - 1;
+						int maxIndex = Enum.GetNames(typeof(HiraganaIndexEnum)).Length - 1;
 						if (index > maxIndex) throw new Exception(index + "は" + maxIndex + "の範囲を超えています");
 						HiraganaIndexEnum indexEnum = (HiraganaIndexEnum)Enum.ToObject(typeof(HiraganaIndexEnum), index);
 						// enumから表示文字を取得
