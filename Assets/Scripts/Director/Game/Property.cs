@@ -50,6 +50,47 @@ namespace Game.Director
 									new Vector2(65, -304),
 								};
 								break;
+							case HiraganaIndexEnum.い:
+								positions = new Vector2[] {
+									new Vector2(-233, 170),
+									new Vector2(-100, -274),
+									new Vector2(153, 138),
+									new Vector2(259, -174),
+								};
+								break;
+							case HiraganaIndexEnum.う:
+								positions = new Vector2[] {
+									new Vector2(-140, 212),
+									new Vector2(120, 180),
+									new Vector2(-201, 11),
+									new Vector2(162, 4),
+									new Vector2(-93, -300),
+								};
+								break;
+							case HiraganaIndexEnum.え:
+								positions = new Vector2[] {
+									new Vector2(-110, 215),
+									new Vector2(103, 186),
+									new Vector2(-196, 29),
+									new Vector2(103, 46),
+									new Vector2(-221, -293),
+									new Vector2(17, -136),
+									new Vector2(78, -291),
+									new Vector2(247, -293),
+								};
+								break;
+							case HiraganaIndexEnum.お:
+								positions = new Vector2[] {
+									new Vector2(-235, 97),
+									new Vector2(40, 122),
+									new Vector2(-93, 223),
+									new Vector2(-108, -292),
+									new Vector2(-248, -204),
+									new Vector2(42, -45),
+									new Vector2(224, -146),
+									new Vector2(38, -291),
+								};
+								break;
 								// TODO これ以降で別の文字も設定していく
 						}
 						break;
