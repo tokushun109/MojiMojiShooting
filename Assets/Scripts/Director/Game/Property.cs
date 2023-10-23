@@ -89,6 +89,8 @@ namespace Game.Director
 									new Vector2(42, -45),
 									new Vector2(224, -146),
 									new Vector2(38, -291),
+									new Vector2(155, 139),
+									new Vector2(273, 58),
 								};
 								break;
 								// TODO これ以降で別の文字も設定していく
