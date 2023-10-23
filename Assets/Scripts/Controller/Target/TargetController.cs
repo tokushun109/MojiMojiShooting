@@ -17,6 +17,27 @@ namespace Target.Controller
 		// Update is called once per frame
 		void Update()
 		{
+
+			// デバッグ用
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+
+				Vector2[] positions = GameDirector.instance.currentCharacter.positions;
+				GameDirector.instance.NextPosition();
+				if (GameDirector.instance.currentPositionIndex <= positions.Length - 1)
+				{
+					// ターゲットを移動する
+					transform.GetComponent<RectTransform>().anchoredPosition = GameDirector.instance.GetPosition();
+				}
+				else
+				{
+					// ポジションをリセットする
+					GameDirector.instance.ResetPosition();
+					// オブジェクトを消す
+					Destroy(gameObject);
+				}
+			}
+
 			if (Input.GetMouseButtonDown((int)MouseButton.Left))
 			{
 				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

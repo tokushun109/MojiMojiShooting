@@ -3,9 +3,9 @@ namespace Game.Director
 	public enum CharacterTypeEnum
 	{
 		Hiragana,
-		Katakana,
-		Number,
-		Alphabet
+		// Katakana,
+		// Number,
+		// Alphabet
 	}
 
 	enum HiraganaIndexEnum
