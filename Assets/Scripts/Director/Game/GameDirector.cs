@@ -11,7 +11,7 @@ namespace Game.Director
 			if (!instance) instance = this;
 
 			// TODO キャラクターをランダムで選択するメソッドを呼び出すようにする
-			currentCharacter = new Character(CharacterTypeEnum.Hiragana, (int)HiraganaIndexEnum.あ);
+			currentCharacter = new Character(CharacterTypeEnum.Hiragana, (int)HiraganaIndexEnum.お);
 			characterText.text = currentCharacter.displayCharacter;
 		}
 

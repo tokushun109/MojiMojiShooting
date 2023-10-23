@@ -579,7 +579,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3042"
+  m_Text: "\u304A"
 --- !u!222 &1269901724
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -708,8 +708,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1037438600}
   - {fileID: 1919338251}
-  - {fileID: 1123380534}
   - {fileID: 72008305}
+  - {fileID: 1123380534}
   - {fileID: 177219655}
   - {fileID: 1199656319}
   - {fileID: 1591921721}
