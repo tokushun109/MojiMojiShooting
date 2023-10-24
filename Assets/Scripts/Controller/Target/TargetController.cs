@@ -31,8 +31,8 @@ namespace Target.Controller
 				}
 				else
 				{
-					// ポジションをリセットする
-					GameDirector.instance.ResetPosition();
+					// クリアの処理
+					GameDirector.instance.StageClear();
 					// オブジェクトを消す
 					Destroy(gameObject);
 				}
@@ -55,8 +55,8 @@ namespace Target.Controller
 					}
 					else
 					{
-						// ポジションをリセットする
-						GameDirector.instance.ResetPosition();
+						// クリアの処理
+						GameDirector.instance.StageClear();
 						// オブジェクトを消す
 						Destroy(gameObject);
 					}

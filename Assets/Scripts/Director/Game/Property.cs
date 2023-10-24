@@ -11,6 +11,7 @@ namespace Game.Director
 		public static GameDirector instance;
 
 		[SerializeField, Header("表示文字のテキスト")] Text characterText;
+		[SerializeField, Header("ゲームクリアのテキスト")] Text clearText;
 
 		// 現在の文字
 		public Character currentCharacter;

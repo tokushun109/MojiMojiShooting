@@ -58,6 +58,26 @@ namespace Game.Director
         }
 
         /// <summary>
+        /// ターゲットのポジションをリセットする
+        /// </summary>
+        public void resetPosition()
+        {
+            currentPositionIndex = 0;
+        }
+
+        public void StageClear()
+        {
+            resetPosition();
+            // 文字の色を濃くする
+            characterText.color = new Color(1, 1, 1, 0.8f);
+            // ゲームクリアテキストを表示する
+            clearText.gameObject.SetActive(true);
+
+            // 次へボタンを表示する
+            // もう一度ボタンを表示する
+        }
+
+        /// <summary>
         /// 現在のターゲットのポジションを取得する
         /// </summary>
         /// <returns></returns>
@@ -74,12 +94,5 @@ namespace Game.Director
             currentPositionIndex++;
         }
 
-        /// <summary>
-        /// ターゲットのポジションをリセットする
-        /// </summary>
-        public void ResetPosition()
-        {
-            currentPositionIndex = 0;
-        }
     }
 }
