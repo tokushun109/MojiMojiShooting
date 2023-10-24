@@ -65,16 +65,18 @@ namespace Game.Director
             currentPositionIndex = 0;
         }
 
+        /// <summary>
+        /// ステージクリア時の処理
+        /// </summary>
         public void StageClear()
         {
             resetPosition();
             // 文字の色を濃くする
             characterText.color = new Color(1, 1, 1, 0.8f);
-            // ゲームクリアテキストを表示する
+            // テキストを表示する
             clearText.gameObject.SetActive(true);
-
-            // 次へボタンを表示する
-            // もう一度ボタンを表示する
+            nextText.gameObject.SetActive(true);
+            resetText.gameObject.SetActive(true);
         }
 
         /// <summary>

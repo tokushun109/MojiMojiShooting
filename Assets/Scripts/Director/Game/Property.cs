@@ -12,6 +12,8 @@ namespace Game.Director
 
 		[SerializeField, Header("表示文字のテキスト")] Text characterText;
 		[SerializeField, Header("ゲームクリアのテキスト")] Text clearText;
+		[SerializeField, Header("次へのテキスト")] Text nextText;
+		[SerializeField, Header("最初からのテキスト")] Text resetText;
 
 		// 現在の文字
 		public Character currentCharacter;
