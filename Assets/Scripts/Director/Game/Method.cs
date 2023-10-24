@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game.Director
 {
@@ -60,23 +61,31 @@ namespace Game.Director
         /// <summary>
         /// ターゲットのポジションをリセットする
         /// </summary>
-        public void resetPosition()
+        void resetPosition()
         {
             currentPositionIndex = 0;
         }
 
         /// <summary>
-        /// ステージクリア時の処理
+        /// クリア関連のテキストの表示を一括で変更する
         /// </summary>
-        public void StageClear()
+        /// <param name="isActive"></param>
+        void setActiveForClearText(bool isActive)
         {
-            resetPosition();
-            // 文字の色を濃くする
-            characterText.color = new Color(1, 1, 1, 0.8f);
-            // テキストを表示する
-            clearText.gameObject.SetActive(true);
-            nextText.gameObject.SetActive(true);
-            resetText.gameObject.SetActive(true);
+            characterText.color = new Color(1, 1, 1, isActive ? 0.8f : 0.4f);
+            clearText.gameObject.SetActive(isActive);
+            if (characterHistories.Count < stageCount) nextText.gameObject.SetActive(isActive);
+            resetText.gameObject.SetActive(isActive);
+        }
+
+        /// <summary>
+        /// ターゲットを生成する
+        /// </summary>
+        void generateTarget()
+        {
+            GameObject target = Instantiate(targetObj);
+            target.transform.SetParent(canvasObj.transform, false);
+            target.GetComponent<RectTransform>().anchoredPosition = GetPosition();
         }
 
         /// <summary>
@@ -96,5 +105,29 @@ namespace Game.Director
             currentPositionIndex++;
         }
 
+        /// <summary>
+        /// ステージクリア時の処理
+        /// </summary>
+        public void StageClear()
+        {
+            resetPosition();
+            // テキストを表示する
+            setActiveForClearText(true);
+        }
+
+        public void NextStage()
+        {
+            setActiveForClearText(false);
+            setRandomCharacter();
+            generateTarget();
+        }
+
+        /// <summary>
+        /// ステージを初めからスタートする
+        /// </summary>
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneNames.GAME_SCENE);
+        }
     }
 }
